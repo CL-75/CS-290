@@ -1,12 +1,12 @@
 <h1>GET Request Received</h1>
 <table>
-      {{#if dataList.length}}
+      {{#if list.length}}
            <tr>
                <th>Name</th>
                <th>Value</th>
            </tr>
       {{/if}}
-       {{#each dataList}}
+       {{#each list}}
               <tr>
                   <td>{{this.name}}</td>
                   <td>{{this.value}}</td>
