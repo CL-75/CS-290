@@ -11,29 +11,29 @@ app.use(bodyparser.json());
 
 app.get('/', function(req, res)
 {
-	var param = [];
-	 for(var key in req.query)
-	 	param.push({'name': key, 'value': req.query[key]});
+	var param1 = [];
+	 for(var key1 in req.query)
+	 	param1.push({'name': key1, 'value': req.query[key1]});
 
 	 var context = {};
-	 context.list = param;
+	 context.list = param1;
 	 context.type = "GET";
 
-	 res.render("handler", context);
+	 res.render("getRequest", context);
 
 });
 
 app.post('/', function(req, res)
 {
-	var param = [];
+	var param2 = [];
 	 for(var key2 in req.body)
-	 	param.push({'name': key2, 'value': req.body[key2]});
+	 	param2.push({'name': key2, 'value': req.body[key2]});
 
 	 var context = {};
-	 context.list = param;
+	 context.bodyList = param2;
 	 context.type = "POST";
 
-	 res.render('handler', context);
+	 res.render("postRequest, context);
 });
 
 app.use(function(req, res)
